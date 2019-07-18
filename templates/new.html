@@ -3,28 +3,29 @@
     <head>
         <title>  New Flask project </title>
         <meta name = "author" content = Juliet Ama Ilupeju>
-        <link rel = "stylesheet" href ="static/css/index2.css">
+        <link rel = "stylesheet" href ="static/index2.css">
          </head>
 
     <body> 
         <div class = "todo">
             
-    <form action = "/add_todo">
+                <form action = "/add_todo">
+                    
+                <label for = "todo" <h1>To do list</h1> </label>
+                
+                <input class = "input-box" type = "text" name = "item">
+                
+                <button class = "button" style = "margin:0px;">Submit</button>
+                
+                </form>
+                
+        <ol>
         
-    <label for = "todo" <h1>To do list</h1> </label>
+        {%for item in items%}
+        <li>{{item}}</li>
+         {%endfor%}
+        </ol>
     
-    <input class = "input-box" type = "text" name = "item">
-    
-    <button class = "button" style = "margin:0px;">Submit</button>
-    
-    </form>
-    
-    <ol>
-    
-    {%for item in items%}
-    <li>{{item}}</li>
-    {%endfor%}
-    </ol>
     </div>
     </body>
     
